@@ -5,6 +5,7 @@ import { newRequest } from '@/server/firebase';
 
 export default function Home() {
   const [submitted, setSubmitted] = useState(0);
+
   async function submit(event: FormEvent<HTMLFormElement>) {
       event.preventDefault()
       const formData = new FormData(event.currentTarget)

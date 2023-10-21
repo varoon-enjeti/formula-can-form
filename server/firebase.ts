@@ -1,5 +1,3 @@
-// import {initializeApp, deleteApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js'
-// import { getFirestore, collection, doc, setDoc } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js';
 import { initializeApp, deleteApp } from "firebase/app";
 import { getFirestore, collection, doc, addDoc } from "firebase/firestore";
 
@@ -32,5 +30,3 @@ const db = getFirestore(app);
         console.log("Done");
     }
 }
-
-// newRequest("test", "test", "test", "test", "test")
