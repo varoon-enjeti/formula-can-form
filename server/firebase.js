@@ -13,7 +13,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
- export async function newRequest(name: string, id: string, format: string, length: string, origin: string){
+ export async function newRequest(name, id, format, length, origin){
   try {
     await setDoc(doc(db, "requests"), {
       messageName: name,
@@ -30,3 +30,5 @@ const db = getFirestore(app);
         console.log("Done");
     }
 }
+
+newRequest("test", "test", "test", "test", "test")

@@ -10,10 +10,10 @@ export default function Home() {
       const name: string =  (event.currentTarget.elements[0] as HTMLInputElement).value
       const id: string =  (event.currentTarget.elements[1] as HTMLInputElement).value
       const format: string =  (event.currentTarget.elements[2] as HTMLInputElement).value
-      const lengtth: string =  (event.currentTarget.elements[3] as HTMLInputElement).value
+      const length: string =  (event.currentTarget.elements[3] as HTMLInputElement).value
       const origin: string =  (event.currentTarget.elements[4] as HTMLInputElement).value
       // console.log(firstName, lastName, email, netid, major, year)
-      newRequest(firstName, lastName, email)
+      newRequest(name, id, format, length, origin)
   }
 
   return (
