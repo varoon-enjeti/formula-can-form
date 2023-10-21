@@ -1,7 +1,7 @@
-'use client'
-
+// import {initializeApp, deleteApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js'
+// import { getFirestore, collection, doc, setDoc } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js';
 import { initializeApp, deleteApp } from "firebase/app";
-import { getFirestore, collection, doc, setDoc } from "firebase/firestore";
+import { getFirestore, collection, doc, addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAOH3kQKkOV9JBUpakpEmNCmlwUrPTu3C4",
@@ -17,7 +17,7 @@ const db = getFirestore(app);
 
  export async function newRequest(name: string, id: string, format: string, length: string, origin: string){
   try {
-    await setDoc(doc(db, "requests"), {
+    await addDoc(collection(db, "requests"), {
       messageName: name,
       messageID: id,
       idFormat: format,
@@ -33,4 +33,4 @@ const db = getFirestore(app);
     }
 }
 
-newRequest("test", "test", "test", "test", "test")
+// newRequest("test", "test", "test", "test", "test")
