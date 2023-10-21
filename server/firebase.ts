@@ -1,3 +1,5 @@
+'use client'
+
 import { initializeApp, deleteApp } from "firebase/app";
 import { getFirestore, collection, doc, setDoc } from "firebase/firestore";
 
